@@ -1,0 +1,19 @@
+sorted 함수는 문자열이든 리스트든 리스트로 반환한다. ex)  'bca'->['a','b','c']
+join 함수를 통해 위의 형태를 문자열로 다시 바꿀수 있다 ex)--> ''.join(['a','b','c'])-->'abc'
+sort 함수는 제자리 정렬로 반환값이 없다.  a.sort() (O)  /// b=a.sort()  (X)
+
+sorted 함수는 또한 key=옵션을 지정해 정렬을 위한 키 또는 함수를 별도로 지정할 수 있다.
+ex) c=['ccc','aaaa','d','bb']
+    sorted(c,key=len)
+    -->['d','bb','ccc','aaaa']
+
+함수를 이용해서 키를 정의하는 방법
+<첫번째 문자열과 마지막 문자열 순으로 정렬해보자>
+a=['cde','cfc','abc']
+
+def fn(s):
+    return s[0],s[-1]
+print(sorted(a,key=fn))  ---> ['abc','cfc','cde']
+
+**lambda 이용**
+sorted(a,key=lambda s : (s[0],s[-1]))

@@ -14,6 +14,7 @@ class Solution:
         
         # count=collections.Counter(word)    제한 문자가 없다면 개수 세는데 용이할듯 
         
+        
         return max(d,key=d.get)
 
 test=Solution()
