@@ -14,4 +14,4 @@ class Solution:
             result = max(result,expand(i,i+2),expand(i,i+1),key=len)
         return result
 
-test=Solution
+test=Solution              
