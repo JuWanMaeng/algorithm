@@ -10,8 +10,10 @@ for i in range(N):
     else:
         if num>maxheap[0][1]:
             heapq.heappush(minheap,num)
+        else:
+            heapq.heappush(maxheap,(-num,num))
 
-    if(len(minheap)>len(maxheap)+1):
+    if(len(minheap)>len(maxheap)):
         a=heapq.heappop(minheap)
         heapq.heappush(maxheap,(-a,a))
     if(len(maxheap)>len(minheap)+1):
