@@ -9,8 +9,8 @@ class Solution:
                 result.append(path)
                 return
 
-            for i in range(index,len(candidates)):
-                dfs(csum-candidates[i],i,path+[candidates[i]])
+            for i in range(index,len(candidates)):                  #매우 중요한 부분 함수로 보내면서 원소를 추가했다
+                dfs(csum-candidates[i],i,path+[candidates[i]])    
         
         dfs(target,0,[])
         return result
